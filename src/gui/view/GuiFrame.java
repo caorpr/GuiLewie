@@ -6,7 +6,7 @@ import gui.controller.GuiController;
 /**
  * 
  * @author cand3952
- * @version 0.2 November 9, 2015.
+ * @version 0.3 November 9, 2015.
  */
 
 public class GuiFrame extends JFrame
