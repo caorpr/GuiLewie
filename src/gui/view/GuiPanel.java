@@ -1,9 +1,14 @@
 package gui.view;
 
 import javax.swing.*; // You can do this so that everything in "javax.swing." is imported! Can mess up HUGE projects apparently, 
+
 import java.awt.event.ActionListener;     //  but Mr. H says it is okay for any of the projects that we do.
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
+
 import gui.controller.GuiController;
+
+import java.awt.event.*;
 
 public class GuiPanel extends JPanel
 {
@@ -60,8 +65,47 @@ public class GuiPanel extends JPanel
 				
 			}
 		});
+		
+		this.addMouseListener(new MouseListener()
+		{
+			
+			public void mouseClicked(MouseEvent clicked)
+			{
+				
+			}
+			
+			
+			@Override
+			public void mouseReleased(MouseEvent released)
+			{
+			
+				
+			}
+			
+			
+			@Override
+			public void mousePressed(MouseEvent pressed)
+			{
+				
+				
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent entered)
+			{
+			
+				
+			}
+			
+			
+			@Override
+			public void mouseExited(MouseEvent exited)
+			{
+				
+				
+			}
+		});
+		
+		
 	}
-	
-	
-	
 }
