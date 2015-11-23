@@ -72,7 +72,15 @@ public class GuiPanel extends JPanel
 			
 			public void mouseClicked(MouseEvent clicked)
 			{
-				changeRandomColor();
+			
+				if(SwingUtilities.isLeftMouseButton(clicked))
+				{
+					firstTextField.setText("left click!");
+				}
+				else if(SwingUtilities.isRightMouseButton(clicked))
+				{
+					firstTextField.setText("right click!");
+				}
 			}
 			
 			
@@ -101,13 +109,34 @@ public class GuiPanel extends JPanel
 			{
 				changeRandomColor();
 			}
+			
 		});
-		
-		
-	}
-
-
 	
+		
+		
+		
+		this.addMouseMotionListener(new MouseMotionListener()
+		{
+			
+				public void mouseMoved(MouseEvent moved)
+				{
+					firstButton.setText(" Mouse X: " + moved.getX() + " Y: " + moved.getY());
+					
+					if((moved.getX() > 25 && moved.getX() < 40) && (moved.getY() > 50 && moved.getY() < 70))
+					{
+						changeRandomColor();
+					}
+				}
+				
+				public void mouseDragged(MouseEvent dragged)
+				{
+					firstTextField.setText("alt + drag!");
+				}
+			
+			});
+	}	
+
+
 	private void changeRandomColor()
 	{
 		int red, green, blue;
