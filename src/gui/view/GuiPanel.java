@@ -2,6 +2,7 @@ package gui.view;
 
 import javax.swing.*; // You can do this so that everything in "javax.swing." is imported! Can mess up HUGE projects apparently, 
 
+import java.awt.Color;
 import java.awt.event.ActionListener;     //  but Mr. H says it is okay for any of the projects that we do.
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
@@ -71,55 +72,52 @@ public class GuiPanel extends JPanel
 			
 			public void mouseClicked(MouseEvent clicked)
 			{
-				
+				changeRandomColor();
 			}
 			
 			
 			@Override
 			public void mouseReleased(MouseEvent released)
 			{
-			
-				
+				changeRandomColor();
 			}
 			
 			
 			@Override
 			public void mousePressed(MouseEvent pressed)
 			{
-				
-				
+				changeRandomColor();
 			}
 			
 			@Override
 			public void mouseEntered(MouseEvent entered)
 			{
-			
-				
+				changeRandomColor();
 			}
 			
 			
 			@Override
 			public void mouseExited(MouseEvent exited)
 			{
-				
-				
+				changeRandomColor();
 			}
 		});
 		
 		
 	}
 
-private void changeRandomColor()
-{
-	int red, green, blue;
+
 	
-	red = (int) (Math.random() * 256);
-	green = (int) (Math.random() * 256);
-	blue = (int) (Math.random() * 256);
+	private void changeRandomColor()
+	{
+		int red, green, blue;
 	
-	this.setBackground(new Color(red, green, blue));
+		red = (int) (Math.random() * 256);
+		green = (int) (Math.random() * 256);
+		blue = (int) (Math.random() * 256);
 	
-}
+		this.setBackground(new Color(red, green, blue));
+	}
 
 
 }
